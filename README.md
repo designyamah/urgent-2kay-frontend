@@ -4,6 +4,8 @@
 
 Welcome to the frontend codebase for URGENT 2KAY! This document will help all team members get started and collaborate efficiently.
 
+\*\* This is a Living documents(its still up for regular reviews and updates)
+
 ---
 
 ### 🧰 Tech Stack
@@ -25,40 +27,55 @@ We use a **Gitflow-like workflow**:
 
 ---
 
-### 🔧 Setup Instructions
+### ⚙️ Git Workflow Guide
 
-1. **Clone the repo:**
+#### 1. Clone the repository
 
-   ```bash
-   git clone https://github.com/designyamah/urgent-2kay-frontend.git
-   cd urgent-2kay-frontend
-   ```
+git clone https://github.com/designyamah/urgent-2kay-frontend.git
+cd urgent-2kay-frontend
 
-2. Install dependencies:
+#### 2. Install dependencies
 
-```bash
-    npm install
-```
+npm install
 
-3. Switch to the dev branch:
+#### 3. Checkout the dev branch
 
-```bash
-   git checkout dev
-```
+git checkout dev
+git pull origin dev # Always pull the latest changes
 
-4. Create your own feature branch:
-   git checkout -b feature/<your-feature-name>
-5. Push your branch:
-   git push -u origin feature/<your-feature-name>
+#### 4. Create a feature branch
 
-✅ Working on a Feature?
+git checkout -b feature/your-feature-name
 
-- Always branch out from dev
+🔸 Use clear, short names like `feature/login-form` or `feature/update-navbar`
 
-- Make small, atomic commits with clear messages
+#### 5. Work on your feature
 
-- Open a Pull Request into dev once you're done
+- Make your changes
+- Frequently commit your progress:
+  git add .
+  git commit -m "Add: implemented login form UI"
 
-- Request a review from the team lead or any reviewer
+#### 6. Push your feature branch
 
-- Only the team lead merges into main after testing
+git push -u origin feature/your-feature-name
+
+#### 7. Create a Pull Request (PR)
+
+- Go to GitHub
+- Open a PR from `feature/your-feature-name` into `dev`
+- Request a review from the team lead or another dev
+
+❗ Do NOT push directly to `dev` or `main`. Always use feature branches and PRs.
+
+---
+
+### 🔒 Branch Protection
+
+- `main` is for stable, production-ready code
+- Only the **team lead** merges to `main` after testing
+- All features must go through `dev` first via PRs (Pull Requests)
+
+---
+
+✅ Happy coding, team!
