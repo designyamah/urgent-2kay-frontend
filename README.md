@@ -46,8 +46,6 @@ We use a **Gitflow-like workflow**:
    git checkout dev
 ```
 
-git checkout dev
-
 4. Create your own feature branch:
    git checkout -b feature/<your-feature-name>
 5. Push your branch:
@@ -55,12 +53,12 @@ git checkout dev
 
 ✅ Working on a Feature?
 
-Always branch out from dev
+- Always branch out from dev
 
-Make small, atomic commits with clear messages
+- Make small, atomic commits with clear messages
 
-Open a Pull Request into dev once you're done
+- Open a Pull Request into dev once you're done
 
-Request a review from the team lead or any reviewer
+- Request a review from the team lead or any reviewer
 
-Only the team lead merges into main after testing
+- Only the team lead merges into main after testing
