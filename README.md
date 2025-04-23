@@ -38,12 +38,16 @@ We use a **Gitflow-like workflow**:
 
 #### 2. Install dependencies
 
-npm install
+```bash
+   npm install
+```
 
 #### 3. Checkout the dev branch
 
-git checkout dev
+```bash
+   git checkout dev
 git pull origin dev # Always pull the latest changes
+```
 
 #### 4. Create a feature branch
 
