@@ -31,8 +31,10 @@ We use a **Gitflow-like workflow**:
 
 #### 1. Clone the repository
 
-git clone https://github.com/designyamah/urgent-2kay-frontend.git
-cd urgent-2kay-frontend
+```bash
+   git clone https://github.com/designyamah/urgent-2kay-frontend.git
+   cd urgent-2kay-frontend
+```
 
 #### 2. Install dependencies
 
@@ -45,9 +47,9 @@ git pull origin dev # Always pull the latest changes
 
 #### 4. Create a feature branch
 
-git checkout -b feature/your-feature-name
+git checkout -b yourname-feature/your-feature-name
 
-🔸 Use clear, short names like `feature/login-form` or `feature/update-navbar`
+🔸 Use clear, short names like `joseph-feature/login-form` or `chioma-feature/update-navbar`
 
 #### 5. Work on your feature
 
