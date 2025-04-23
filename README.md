@@ -35,11 +35,18 @@ We use a **Gitflow-like workflow**:
    ```
 
 2. Install dependencies:
-   npm install
-   Switch to the dev branch:
+
+```bash
+    npm install
+```
 
 3. Switch to the dev branch:
+
+```bash
    git checkout dev
+```
+
+git checkout dev
 
 4. Create your own feature branch:
    git checkout -b feature/<your-feature-name>
