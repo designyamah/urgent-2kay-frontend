@@ -46,7 +46,7 @@ We use a **Gitflow-like workflow**:
 
 ```bash
    git checkout dev
-git pull origin dev # Always pull the latest changes
+   git pull origin dev # Always pull the latest changes
 ```
 
 #### 4. Create a feature branch
