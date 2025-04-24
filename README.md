@@ -15,7 +15,7 @@ This repo is set up for fast development, team collaboration, and clean architec
 
 ### 🔗 Live Preview
 
-https://urgent-2kay-fe.vercel.app
+https://urgent-2kay-frontend.vercel.app/
 
 ### 📁 Folder Structure
 
