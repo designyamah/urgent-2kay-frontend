@@ -19,18 +19,15 @@ https://urgent-2kay-frontend.vercel.app/
 
 ### 📁 Folder Structure
 
-src/
-├── assets/ # Images, logos
-├── components/ # Reusable UI components
-├── context/ # Context API logic (optional)
-├── pages/ # Page-level components (routes)
-├── routes/ # App routes and route guards
-├── services/ # API calls
-├── store/ # Redux slices, store setup
-├── types/ # TypeScript interfaces
-├── utils/ # Helper functions
-├── App.tsx
-└── main.tsx
+- `src/pages`: Screens like Login, Dashboard, etc. Page-level components (routes)
+- `src/components`: Reusable UI components
+- `src/context`: Context API logic (optional)
+- `src/store`: Redux slices, store setup
+- `src/utils`: Helper functions
+- `src/context`: Context API logic (optional)
+- `src/styles`: CSS for components
+- `App.tsx`: Parent Component
+- `main.tsx`:
 
 ### 🌱 Branch Strategy
 
