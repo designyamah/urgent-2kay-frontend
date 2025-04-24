@@ -1,21 +1,36 @@
-# React + TypeScript + Vite
+# 🚀 URGENT 2KAY – Frontend Codebase (React + TypeScript + Vite)
 
-## 🚀 URGENT 2KAY - Frontend Collaboration Guide
+Welcome to the frontend codebase for **URGENT 2KAY**!  
+This repo is set up for fast development, team collaboration, and clean architecture.
 
-Welcome to the frontend codebase for URGENT 2KAY! This document will help all team members get started and collaborate efficiently.
+> 🛠 This is a living document — we’ll update it as the project grows.
 
-\*\* This is a Living documents(its still up for regular reviews and updates)
+## ⚙️ Tech Stack
 
----
+- ⚛️ **React** (via Vite + TypeScript)
+- 🎯 **Redux Toolkit** & Context API (for scalable state management)
+- 🎨 **Tailwind CSS** _(or plain CSS if preferred)_
+- 🔀 **React Router**
+- 🐙 **Git + GitHub** for version control
 
-### 🧰 Tech Stack
+### 🔗 Live Preview
 
-- React (via Vite)
-- Context API + Redux Toolkit (RTK) for State Management
-- Tailwind CSS (or preferred styling framework or Plain CSS)
-- Git & GitHub for version control
+https://urgent-2kay-fe.vercel.app
 
----
+### 📁 Folder Structure
+
+src/
+├── assets/ # Images, logos
+├── components/ # Reusable UI components
+├── context/ # Context API logic (optional)
+├── pages/ # Page-level components (routes)
+├── routes/ # App routes and route guards
+├── services/ # API calls
+├── store/ # Redux slices, store setup
+├── types/ # TypeScript interfaces
+├── utils/ # Helper functions
+├── App.tsx
+└── main.tsx
 
 ### 🌱 Branch Strategy
 
