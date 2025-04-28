@@ -6,7 +6,9 @@ interface HeaderProps {
   walletAddress?: string;
 }
 
-export const Header = ({ walletAddress = "0x4A...03DC" }: HeaderProps): JSX.Element => {
+export const Header = ({
+  walletAddress = "0x4A...03DC",
+}: HeaderProps): JSX.Element => {
   const location = useLocation();
   const path = location.pathname.substring(1);
   const formattedPath = path.charAt(0).toUpperCase() + path.slice(1);
@@ -18,7 +20,7 @@ export const Header = ({ walletAddress = "0x4A...03DC" }: HeaderProps): JSX.Elem
           <LayoutDashboard size={16} />
           <span>{formattedPath}</span>
         </div>
-        
+
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2 text-sm">
             <span className="text-gray-500">Wallet</span>
@@ -27,12 +29,6 @@ export const Header = ({ walletAddress = "0x4A...03DC" }: HeaderProps): JSX.Elem
           <div className="relative">
             <button className="p-2 hover:bg-gray-100 rounded-full">
               <Bell size={20} className="text-gray-600" />
-            </button>
-            <div className="absolute top-2 right-2 w-2 h-2 bg-[#5A3CCA] rounded-full"></div>
-          </div>
-          <div className="relative">
-            <button className="p-2 hover:bg-gray-100 rounded-full">
-              <MessageSquare size={20} className="text-gray-600" />
             </button>
             <div className="absolute top-2 right-2 w-2 h-2 bg-[#5A3CCA] rounded-full"></div>
           </div>
