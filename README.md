@@ -84,6 +84,22 @@ git push -u origin feature/your-feature-name
 
 ❗ Do NOT push directly to `dev` or `main`. Always use feature branches and PRs.
 
+🆕 Starting a New Feature After Merging
+Once your previous PR has been approved and merged into dev, and you want to work on a new feature:
+
+✅ First, update your local dev:
+
+```bash
+   git checkout dev
+   git pull origin dev # Always pull the latest changes
+```
+
+✅ Then create a new feature branch based on the updated dev:
+
+```bash
+  git checkout -b yourname-feature/your-next-feature
+```
+
 ---
 
 ### 🔒 Branch Protection
