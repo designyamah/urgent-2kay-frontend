@@ -156,11 +156,11 @@ export const Dashboard = (): JSX.Element => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-6 border border-gray-100 flex flex-col"
+                  className="bg-white rounded-xl p-4 border border-gray-100 flex flex-col"
                 >
-                  <div className="flex items-start gap-3 mb-6">
+                  <div className="flex items-center gap-3">
                     {stat.icon}
-                    <span className="text-gray-500 text-sm font-normal">
+                    <span className="text-gray-500 text-sm font-normal whitespace-nowrap">
                       {stat.label}
                     </span>
                   </div>
