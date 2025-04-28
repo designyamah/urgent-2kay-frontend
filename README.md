@@ -19,15 +19,13 @@ https://urgent-2kay-frontend.vercel.app/
 
 ### 📁 Folder Structure
 
-- `src/pages`: Screens like Login, Dashboard, etc. Page-level components (routes)
-- `src/components`: Reusable UI components
-- `src/context`: Context API logic (optional)
-- `src/store`: Redux slices, store setup
-- `src/utils`: Helper functions
-- `src/context`: Context API logic (optional)
-- `src/styles`: CSS for components
-- `App.tsx`: Parent Component
-- `main.tsx`:
+| Folder          | Purpose                                                                        |
+| :-------------- | :----------------------------------------------------------------------------- |
+| `assets/images` | Holds all static image files.                                                  |
+| `components/ui` | Reusable small UI elements (buttons, tables, form fields).                     |
+| `layouts`       | Layout wrapper(s) used across multiple pages (e.g., dashboard shell).          |
+| `lib`           | Utility files (e.g., helper functions like formatting, API helpers).           |
+| `screens`       | Main views or pages where major features live (login, signup, dashboard, etc). |
 
 ### 🌱 Branch Strategy
 
