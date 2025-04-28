@@ -11,7 +11,7 @@ export const Dashboard = (): JSX.Element => {
   const stats = [
     {
       label: "Total bills Requested",
-      amount: "₦300,480",
+      amount: "₦200,480",
       change: "16%",
       icon: (
         <div className="w-10 h-10 rounded-full bg-[#EAFAEE] flex items-center justify-center">
@@ -165,16 +165,18 @@ export const Dashboard = (): JSX.Element => {
                     </span>
                   </div>
                   <div className="mt-auto">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[28px] font-semibold text-[#1A1A1A]">
-                        {stat.amount}
-                      </span>
+                    <span className="block text-[28px] font-semibold text-[#1A1A1A] my-1 ">
+                      {stat.amount}
+                    </span>
+                    <div className="flex items-center justify-start gap-2">
                       <div className="flex items-center gap-1 text-[#4CD964]">
                         <TrendingUp size={16} />
                         <span className="text-sm">{stat.change}</span>
                       </div>
+                      <p className="text-sm text-gray-500">
+                        Increase this month
+                      </p>
                     </div>
-                    <p className="text-sm text-gray-500">Increase this month</p>
                   </div>
                 </div>
               ))}
