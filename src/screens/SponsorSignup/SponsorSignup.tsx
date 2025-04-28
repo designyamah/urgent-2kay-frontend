@@ -1,0 +1,155 @@
+import React from "react";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { PasswordInput } from "../../components/ui/password-input";
+import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import logo from "../../assets/images/logo2k.png";
+import dashboard from "../../assets/images/signupDashboard.png";
+import googleIcon from "../../assets/images/google.png";
+
+const signupSchema = z
+  .object({
+    email: z.string().email("Please enter a valid email address"),
+    password: z.string().min(8, "Password must be at least 8 characters"),
+    confirmPassword: z
+      .string()
+      .min(8, "Password must be at least 8 characters"),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
+
+type SignupFormData = z.infer<typeof signupSchema>;
+
+export const SponsorSignup = (): JSX.Element => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SignupFormData>({
+    resolver: zodResolver(signupSchema),
+  });
+
+  const onSubmit = (data: SignupFormData) => {
+    console.log(data);
+    // Handle signup logic here once backend endpoint is provided
+  };
+
+  return (
+    <div className="flex flex-col md:flex-row min-h-screen p-8">
+      {/* Left Section */}
+      <div className="w-full md:w-1/2 bg-[#5A3CCA] p-8 rounded-[20px]">
+        <div className="flex items-center gap-2 mb-8 md:mb-16">
+          <img src={logo} alt="Urgent 2kay" className="h-6 md:h-8" />
+        </div>
+
+        <div className="max-w-[500px]">
+          <h1 className="text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] font-medium mb-4 text-white">
+            Bundle all your bills in one app — Bill payment made easy
+          </h1>
+          <p className="text-[#F1EDFF] text-base md:text-lg opacity-80">
+            We simplify financial support by bundling bills into one clear
+            request and sending payments directly to service providers.
+          </p>
+        </div>
+
+        <div className="mt-8 md:mt-16 hidden md:block">
+          <img
+            src={dashboard}
+            alt="Dashboard Preview"
+            className="w-full max-w-[500px] rounded-lg"
+          />
+        </div>
+      </div>
+
+      {/* Right Section */}
+      <div className="w-full md:w-1/2 bg-white p-8 flex items-center">
+        <div className="max-w-[360px] mx-auto">
+          <h2 className="text-2xl md:text-[32px] font-medium text-[#2A2A2A] mb-2">
+            Welcome to Urgent 2kay
+          </h2>
+          <p className="text-sm md:text-base text-[#2A2A2A] mb-6 md:mb-8">
+            Create an account to get started
+          </p>
+
+          <button className="w-full h-12 border border-gray-300 rounded-lg mb-6 flex items-center justify-center gap-2">
+            <img src={googleIcon} alt="Google" className="w-5 h-5" />
+            <span className="text-sm md:text-base">Sign up with Google</span>
+          </button>
+
+          <div className="flex items-center gap-4 mb-6">
+            <div className="flex-1 h-[1px] bg-gray-200"></div>
+            <span className="text-gray-500 text-sm">Or sign up with</span>
+            <div className="flex-1 h-[1px] bg-gray-200"></div>
+          </div>
+
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <div>
+              <Input
+                type="email"
+                placeholder="Enter email address"
+                {...register("email")}
+                className="w-full h-12 rounded-lg border border-gray-300 px-4 text-sm md:text-base"
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <PasswordInput
+                placeholder="Enter password"
+                {...register("password")}
+                className="w-full h-12 rounded-lg border border-gray-300 px-4 text-sm md:text-base"
+                error={errors.password?.message}
+              />
+            </div>
+
+            <div>
+              <PasswordInput
+                placeholder="Confirm password"
+                {...register("confirmPassword")}
+                className="w-full h-12 rounded-lg border border-gray-300 px-4 text-sm md:text-base"
+                error={errors.confirmPassword?.message}
+              />
+            </div>
+
+            <div className="flex items-start gap-2 mt-4">
+              <input type="checkbox" className="mt-1" />
+              <p className="text-xs md:text-sm text-gray-600">
+                By signing up, you agree to the{" "}
+                <Link to="/terms" className="text-[#5A3CCA]">
+                  Terms of Service
+                </Link>{" "}
+                and{" "}
+                <Link to="/privacy" className="text-[#5A3CCA]">
+                  Privacy Policy
+                </Link>
+              </p>
+            </div>
+
+            <Button
+              type="submit"
+              className="w-full h-12 bg-[#5A3CCA] hover:bg-[#4A32A6] text-white rounded-lg mt-6"
+            >
+              Create account
+            </Button>
+
+            <p className="text-center mt-4 text-sm">
+              Already have an account?{" "}
+              <Link to="/login" className="text-[#5A3CCA] hover:underline">
+                Sign in
+              </Link>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
